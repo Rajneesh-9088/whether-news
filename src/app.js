@@ -6,20 +6,25 @@ const port = process.env.PORT || 3000
 
 
 app.use(express.static(path.join(__dirname, "../public")))
+app.set('view engine','hbs')
+
 // routing
 app.get("/", (req,res) =>{
-    res.send("Welcome to you in home page")
+    res.render('index')
 })
+// app.get("", (req,res) =>{
+//     res.render('index')
+// })
 
 app.get("/about", (req,res) =>{
-    res.send("Welcome to you in about page")
+    res.render('about')
 })
-app.get("/whether", (req,res) =>{
-    res.send("Welcome to you in whether page")
+app.get("/wheather", (req,res) =>{
+    res.render("Welcome to you in wheather page")
     
 })
 app.get("*", (req,res) =>{
-    res.send("404 error page oops")
+    res.render("404 error page oops")
     // res.status(404)
 })
 

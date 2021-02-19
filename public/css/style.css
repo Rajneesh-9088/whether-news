@@ -99,6 +99,7 @@ body{
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: flex-start;
 }
 
 .main_header_right figure img {
