@@ -101,8 +101,8 @@ body{
   justify-content: center;
 }
 
-.main_header_right figure {
-
+.main_header_right figure img {
+    filter:  drop-shadow(0 0.5rem 1rem rgba(0,0,0,0.3));
 }
 
 /* footer code */
@@ -119,3 +119,14 @@ footer p {
   font-size: 1.4rem;
 }
 
+@media (max-width: 768px) {
+  .main_header_left {
+    height: auto;
+    margin: 5rem 0;
+  }
+  .main_header_right{
+    height: auto;
+    margin-top: 3rem;
+
+  }
+}
